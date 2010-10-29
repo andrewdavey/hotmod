@@ -28,7 +28,7 @@ namespace Hotmod
 
         static HotmodSection GetConfig()
         {
-            return (HotmodSection)ConfigurationManager.GetSection("hot") ?? new HotmodSection();
+            return (HotmodSection)ConfigurationManager.GetSection("hotmod") ?? new HotmodSection();
         }
 
         public void Dispose() { }
