@@ -22,7 +22,7 @@ namespace Hotmod
         {
             if (httpContext.Response.ContentType == "text/html")
             {
-                httpContext.Response.Filter = new HotFilter(httpContext.Response.Filter, httpContext, GetConfig());
+                httpContext.Response.Filter = new HotmodStream(httpContext.Response.Filter, httpContext, GetConfig());
             }
         }
 

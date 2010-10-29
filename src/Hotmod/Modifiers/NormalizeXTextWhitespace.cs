@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Xml.Linq;
 using System.Text.RegularExpressions;
+using System.Xml.Linq;
 
 namespace Hotmod.Modifiers
 {
@@ -20,7 +18,7 @@ namespace Hotmod.Modifiers
 
             foreach (var textNode in textNodes)
             {
-                textNode.Value = ModifyWhitespace(textNode.Value);
+                textNode.Value = NormalizeWhitespace(textNode.Value);
             }
 
             return document;
@@ -30,8 +28,8 @@ namespace Hotmod.Modifiers
         {
             return !textNode.Parent.Name.LocalName.Equals("pre", StringComparison.OrdinalIgnoreCase);
         }
-        
-        string ModifyWhitespace(string text)
+
+        string NormalizeWhitespace(string text)
         {
             return whitespace.Replace(newlineAtEnd.Replace(text, " "), " ");
         }

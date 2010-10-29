@@ -8,7 +8,16 @@ namespace Hotmod.Configuration
     {
         public ModifierCollection()
         {
-            BaseAdd(new ModifierElement { Name = "NormalizeXTextWhitespace", Type = typeof(NormalizeXTextWhitespace).AssemblyQualifiedName });
+            AddDefaultModifiers();
+        }
+
+        void AddDefaultModifiers()
+        {
+            BaseAdd(new ModifierElement
+            {
+                Name = "NormalizeXTextWhitespace",
+                Type = typeof(NormalizeXTextWhitespace).AssemblyQualifiedName
+            });
         }
 
         protected override ConfigurationElement CreateNewElement()
