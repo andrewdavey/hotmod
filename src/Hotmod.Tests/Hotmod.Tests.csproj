@@ -47,9 +47,13 @@
     <Reference Include="xunit">
       <HintPath>..\..\lib\xunit\xunit.dll</HintPath>
     </Reference>
+    <Reference Include="xunit.runner.tdnet">
+      <HintPath>..\..\lib\xunit\xunit.runner.tdnet.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HotmodStreamTests.cs" />
+    <Compile Include="Modifiers\NormalizeXTextWhitespaceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

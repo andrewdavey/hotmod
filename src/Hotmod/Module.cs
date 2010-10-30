@@ -5,7 +5,7 @@ using Hotmod.Configuration;
 
 namespace Hotmod
 {
-    public class HtmlTransformer : IHttpModule
+    public class Module : IHttpModule
     {
         public void Init(HttpApplication application)
         {

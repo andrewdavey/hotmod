@@ -164,7 +164,7 @@ namespace Hotmod
                     case PrettyPrint.InDebugMode:
                         return httpContext.IsDebuggingEnabled;
 
-                    case PrettyPrint.Off:
+                    case PrettyPrint.RemoveWhitespace:
                     default:
                         return false;
                 }

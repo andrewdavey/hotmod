@@ -68,7 +68,7 @@ namespace Hotmod
         [Fact]
         public void pretty_print_off_removes_spaces()
         {
-            config.PrettyPrint = PrettyPrint.Off;
+            config.PrettyPrint = PrettyPrint.RemoveWhitespace;
             WriteHtml(@"<!DOCTYPE html>
 <html>
 <head><title>Test</title></head>

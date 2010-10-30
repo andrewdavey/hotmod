@@ -3,7 +3,7 @@
     public enum PrettyPrint
     {
         InDebugMode,
-        Off,
+        RemoveWhitespace,
         On
     }
 }

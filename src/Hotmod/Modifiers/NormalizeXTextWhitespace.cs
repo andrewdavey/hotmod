@@ -5,7 +5,11 @@ using System.Xml.Linq;
 
 namespace Hotmod.Modifiers
 {
-    class NormalizeXTextWhitespace : IModifier
+    /// <summary>
+    /// Replaces multiple spaces inside all XText nodes with a single space.
+    /// However, whitespace inside &lt;pre&gt; elements is not changed.
+    /// </summary>
+    public class NormalizeXTextWhitespace : IModifier
     {
         readonly Regex newlineAtEnd = new Regex(@"(\r\n|\r|\n)$", RegexOptions.Singleline);
         readonly Regex whitespace = new Regex(@"\s{2,}", RegexOptions.Singleline);
@@ -24,7 +28,7 @@ namespace Hotmod.Modifiers
             return document;
         }
 
-        static bool NotInPreTag(XText textNode)
+        bool NotInPreTag(XText textNode)
         {
             return !textNode.Parent.Name.LocalName.Equals("pre", StringComparison.OrdinalIgnoreCase);
         }
