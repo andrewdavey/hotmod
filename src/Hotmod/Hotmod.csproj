@@ -50,7 +50,7 @@
     <Compile Include="Configuration\PrettyPrint.cs" />
     <Compile Include="HotmodStream.cs" />
     <Compile Include="HtmlEntityHelper.cs" />
-    <Compile Include="HtmlTransformer.cs" />
+    <Compile Include="Module.cs" />
     <Compile Include="IModifier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Modifiers\NormalizeXTextWhitespace.cs" />

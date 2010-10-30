@@ -44,13 +44,13 @@ To use hotmod:
   <!--
   Configure hotmod.
   Attributes:
-    prettyPrint         How to format the output.
-      InDebugMode       Enables pretty print when then web application config is set to Debug mode. In Release mode RemoveWhitespace is used instead.
+    prettyPrint         Defines how to format the output.
+      InDebugMode       (Default) Enables pretty print when then web application config is set to Debug mode. In Release mode RemoveWhitespace is used instead.
       On                Always pretty print HTML output.
       RemoveWhitespace  Remove all insignificant whitespace from HTML output.
 
-    htmlParseError      Defines how to handle parse errors in HTML.
-      Throw             Throw the XmlException that describes the problem.
+    htmlParseError      Defines how to handle parse errors in HTML. e.g. Unclosed tags.
+      Throw             (Default) Throw the XmlException that describes the problem.
       AppendException   Output the original HTML and append the exception ToString content in a comment.
       OutputOriginal    Output the original HTML with not modifications.
 
