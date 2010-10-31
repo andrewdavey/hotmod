@@ -50,6 +50,7 @@
     <Compile Include="Configuration\PrettyPrint.cs" />
     <Compile Include="HotmodStream.cs" />
     <Compile Include="HtmlEntityHelper.cs" />
+    <Compile Include="Modifiers\AppRelativeUrlResolver.cs" />
     <Compile Include="Module.cs" />
     <Compile Include="IModifier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
