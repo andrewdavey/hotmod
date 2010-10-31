@@ -9,6 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotmod.Tests", "Hotmod.Test
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{085152E0-E299-4C71-9326-8627899DC5F9}"
 	ProjectSection(SolutionItems) = preProject
+		..\license.txt = ..\license.txt
 		..\readme.txt = ..\readme.txt
 	EndProjectSection
 EndProject
