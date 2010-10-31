@@ -6,10 +6,10 @@ using System.Xml.Linq;
 namespace Hotmod.Modifiers
 {
     /// <summary>
-    /// Replaces multiple spaces inside all XText nodes with a single space.
+    /// Replaces multiple whitespace characters inside all text nodes with a single space.
     /// However, whitespace inside &lt;pre&gt; elements is not changed.
     /// </summary>
-    public class NormalizeXTextWhitespace : IModifier
+    public class NormalizeTextWhitespace : IModifier
     {
         readonly Regex newlineAtEnd = new Regex(@"(\r\n|\r|\n)$", RegexOptions.Singleline);
         readonly Regex whitespace = new Regex(@"\s{2,}", RegexOptions.Singleline);

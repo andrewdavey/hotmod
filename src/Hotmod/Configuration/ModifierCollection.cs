@@ -15,8 +15,8 @@ namespace Hotmod.Configuration
         {
             BaseAdd(new ModifierElement
             {
-                Name = "NormalizeXTextWhitespace",
-                Type = typeof(NormalizeXTextWhitespace).AssemblyQualifiedName
+                Name = "NormalizeTextWhitespace",
+                Type = typeof(NormalizeTextWhitespace).AssemblyQualifiedName
             });
         }
 

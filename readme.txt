@@ -57,11 +57,14 @@ To use hotmod:
   <modifiers/>
   Each modifier defines a name and a type. "name" can be any string identifier unique in the collection.
   "type" must be the Type full name string of an implementation of the Hotmod.IModifier interface.
+
+  By default the NormalizeTextWhitespace modifier is added to the collection. To remove this
+  include <remove name="NormalizeTextWhitespace"/> or <clear/>.
   -->
   <hotmod prettyPrint="InDebugMode" htmlParseError="AppendException">
     <modifiers>
       <!-- add any custom implementations of Hotmod.IModifier here -->
-      <add name="foo" type="Demo.TimeStamper, Demo" />
+      <add name="TimeStamper" type="Demo.TimeStamper, Demo" />
     </modifiers>
   </hotmod>
 

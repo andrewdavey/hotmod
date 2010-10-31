@@ -2,6 +2,9 @@
 
 namespace Demo
 {
+    /// <summary>
+    /// Adds a paragraph element to the end of the body.
+    /// </summary>
     public class FooModifier : Hotmod.IModifier
     {
         public XDocument Modify(XDocument document)

@@ -54,7 +54,7 @@
   <ItemGroup>
     <Compile Include="HotmodStreamTests.cs" />
     <Compile Include="Modifiers\AppRelativeUrlResolverTests.cs" />
-    <Compile Include="Modifiers\NormalizeXTextWhitespaceTests.cs" />
+    <Compile Include="Modifiers\NormalizeTextWhitespaceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
