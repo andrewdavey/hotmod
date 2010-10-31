@@ -16,4 +16,5 @@
    of the new <em>hotness</em>! 
    x
 </p>
+<p><a href="~/error.aspx">Go to error page</a></p>
 </asp:Content>
