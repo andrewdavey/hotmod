@@ -69,3 +69,10 @@ To use hotmod:
   </hotmod>
 
 </configuration>
+
+-------------------------------------------------------------------------------
+
+If you like hotmod and want to let me know, I'm on twitter @andrewdavey :)
+
+Thanks to @bentalyoruk for thinking of the name "hotmod"
+http://twitter.com/bentayloruk/status/29092863112
