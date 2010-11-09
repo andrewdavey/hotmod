@@ -22,6 +22,7 @@ namespace Hotmod
             httpContext = new Mock<HttpContextBase>();
             httpContext.Setup(c => c.Response.OutputStream).Returns(outputStream);
             httpContext.Setup(c => c.Response.ContentEncoding).Returns(Encoding.ASCII);
+            httpContext.Setup(c => c.Response.ContentType).Returns("text/html");
             streamUnderTest = new HotmodStream(outputStream, httpContext.Object, config);
         }
 
