@@ -18,7 +18,7 @@ namespace Hotmod.Modifiers
         {
             var textNodes = document.DescendantNodes()
                 .OfType<XText>()
-                .Where(NotInPreTag);
+                .Where(ShouldNormalize);
 
             foreach (var textNode in textNodes)
             {
@@ -28,9 +28,11 @@ namespace Hotmod.Modifiers
             return document;
         }
 
-        bool NotInPreTag(XText textNode)
+        bool ShouldNormalize(XText textNode)
         {
-            return !textNode.Parent.Name.LocalName.Equals("pre", StringComparison.OrdinalIgnoreCase);
+            var tag = textNode.Parent.Name.LocalName;
+            return !tag.Equals("pre", StringComparison.OrdinalIgnoreCase)
+                && !tag.Equals("script", StringComparison.OrdinalIgnoreCase);
         }
 
         string NormalizeWhitespace(string text)

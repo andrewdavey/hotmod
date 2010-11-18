@@ -20,10 +20,7 @@ namespace Hotmod
 
         public static void InstallResponseFilter(HttpContextWrapper httpContext)
         {
-            if (httpContext.Response.ContentType == "text/html")
-            {
-                httpContext.Response.Filter = new HotmodStream(httpContext.Response.Filter, httpContext, GetConfig());
-            }
+            httpContext.Response.Filter = new HotmodStream(httpContext.Response.Filter, httpContext, GetConfig());
         }
 
         static HotmodSection GetConfig()

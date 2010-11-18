@@ -20,5 +20,13 @@ namespace Hotmod.Modifiers
             var actual = modifier.Modify(new XDocument(new XElement("html", new XElement("pre", "hello  world\t\t test"))));
             Assert.Equal(actual.Root.Element("pre").Value, "hello  world\t\t test");
         }
+
+        [Fact]
+        public void whitespace_in_script_tags_remains_unchanged()
+        {
+            var modifier = new NormalizeTextWhitespace();
+            var actual = modifier.Modify(new XDocument(new XElement("html", new XElement("script", "hello  world\t\t test"))));
+            Assert.Equal(actual.Root.Element("script").Value, "hello  world\t\t test");
+        }
     }
 }

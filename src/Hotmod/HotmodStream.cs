@@ -33,8 +33,15 @@ namespace Hotmod
             if (closing) return; // Using a StreamReader to read this will cause Close to be called again!
             closing = true;
 
-            WriteFormattedHtml();
-
+            if (httpContext.Response.ContentType == "text/html")
+            {
+                WriteFormattedHtml();
+            }
+            else
+            {
+                Position = 0;
+                CopyTo(outputStream);
+            }
             base.Close();
         }
 
