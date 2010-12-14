@@ -67,5 +67,21 @@ namespace Hotmod.Modifiers
             var href = output.Root.Element("script").Attribute("src").Value;
             Assert.Equal("/root/hello", href);
         }
+
+
+        [Fact]
+        public void form_action_url_resolved()
+        {
+            var document = XDocument.Parse("<html><form action=\"~/hello\"></form></html>");
+            var modifier = new AppRelativeUrlResolver();
+            var httpRequest = new Mock<HttpRequestBase>();
+            httpRequest.Setup(r => r.ApplicationPath).Returns("/root");
+            modifier.HttpRequest = httpRequest.Object;
+
+            var output = modifier.Modify(document);
+
+            var href = output.Root.Element("form").Attribute("action").Value;
+            Assert.Equal("/root/hello", href);
+        }
     }
 }

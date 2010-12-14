@@ -12,6 +12,8 @@ namespace Hotmod.Modifiers
                 .Where(e => e.Name.LocalName == "a" || e.Name.LocalName == "link");
             var elementsWithSrc = document.Descendants()
                 .Where(e => e.Name.LocalName == "img" || e.Name.LocalName == "script");
+            var formElementsWithAction = document.Descendants()
+                .Where(e => e.Name.LocalName == "form");
             var root = HttpRequest.ApplicationPath.TrimEnd('/');
             
             foreach (var element in elementsWithHref)
@@ -21,6 +23,10 @@ namespace Hotmod.Modifiers
             foreach (var element in elementsWithSrc)
             {
                 ExpandUrl(element, "src", root);
+            }
+            foreach (var element in formElementsWithAction)
+            {
+                ExpandUrl(element, "action", root);
             }
 
             return document;
